@@ -1,11 +1,11 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 BOLD_RED='\033[1;31m'
 RESET='\033[0m'
 
 if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ]; then
-    echo "Usage: rename-ext.sh ${BOLD_RED}<from_ext> ${RESET}<to_ext> ${BOLD_RED}-c|-x ${RESET}[--run] "
-    exit 1
+    echo "Usage: rename-ext.sh <from_ext> to_ext> -c|-x [--run] "
+    exit 2
 fi
 
 ext_from="$1"

@@ -1,4 +1,5 @@
 alias eb="vim $HOME/.bash_aliases"
+alias eba="vim $HOME/.bash_apps"
 alias sos="source $HOME/.bashrc"
 
 alias ll="ls -alhF"
@@ -7,11 +8,15 @@ alias cp="cp -rv"
 alias rm="rm -rv"
 alias mkd="mkdir -p"
 
+alias gi="git"
+alias compot="composer"
+
 alias cplh="fc -ln -1 | xsel --clipboard"
 alias xsel="xsel --clipboard"
 
 alias cdl="cd $HOME/Downloads"
 alias cdk="cd /media/roos/ext4/kino"
+alias cdk2="cd /media/roos/USB2/kino"
 alias cdd="cd $HOME/utv"
 #alias cdc="cd $HOME/utv/sputnik/rss-reader"
 alias less="less -N"
@@ -26,7 +31,6 @@ alias arty="php artisan"
 alias pint="vendor/bin/pint"
 alias stan="vendor/bin/phpstan analyse"
 alias pest="pint && stan && arty test --coverage"
-alias pest_git_hook="vendor/bin/pint && vendor/bin/phpstan analyse && php artisan test --coverage"
 
 #alias gest="go test -v -cover ./..."
 alias gest="gotestsum -- -v -cover ./..."
@@ -38,5 +42,10 @@ alias phpun="vendor/bin/phpunit"
 
 export GOPATH="$HOME/go"
 export GOROOT="/usr/local/go"
+export CGO_ENABLED=1
 
-export PATH=$PATH:$HOME/.local/bin:$GOROOT:$GOPATH/bin:$HOME/.config/composer/vendor/bin
+export PATH=$PATH:$HOME/.local/bin:$GOROOT/bin:$GOPATH/bin:$HOME/.config/composer/vendor/bin
+
+if [ -f ~/.bash_apps ]; then
+    . ~/.bash_apps
+fi
