@@ -8,20 +8,26 @@ alias cp="cp -rv"
 alias rm="rm -rv"
 alias mkd="mkdir -p"
 
-alias gi="git"
-alias compot="composer"
+alias g="git"
+alias c="composer"
 
 alias cplh="fc -ln -1 | xsel --clipboard"
 alias xsel="xsel --clipboard"
 
 alias cdl="cd $HOME/Downloads"
+
 alias cdk="cd /media/roos/ext4/kino"
-alias cdk2="cd /media/roos/USB2/kino"
+alias cdk2="cd /media/roos/USB2/kino2"
+alias cdk3="cd $HOME/utv/tools/myd/downloads"
+
 alias cdd="cd $HOME/utv"
-#alias cdc="cd $HOME/utv/sputnik/rss-reader"
 alias less="less -N"
 
-alias mpv="gnome-session-inhibit mpv --"
+function mpvv() {
+    local file="$1" 
+    mpv ${file} > /dev/null 2>&1 &
+}
+
 alias py3="python3"
 alias vpip=".venv/bin/pip"
 alias vpy=".venv/bin/python"
@@ -49,3 +55,4 @@ export PATH=$PATH:$HOME/.local/bin:$GOROOT/bin:$GOPATH/bin:$HOME/.config/compose
 if [ -f ~/.bash_apps ]; then
     . ~/.bash_apps
 fi
+

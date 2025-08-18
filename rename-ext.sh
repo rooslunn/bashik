@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+!/usr/bin/env bash
 
 BOLD_RED='\033[1;31m'
 RESET='\033[0m'

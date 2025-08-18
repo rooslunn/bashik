@@ -1,0 +1,30 @@
+[alias]
+    cl = clone
+    co = checkout
+    ci = commit
+    ds = diff --staged
+    st = status -sb
+    amend = commit --amend -C HEAD
+    undos = reset --soft HEAD^
+    undoh = reset --hard HEAD^
+    ls = log --pretty=format:\"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]\" --decorate --date=short
+    lsd = cherry -v dev
+    lsm = cherry -v master
+    lsf = diff-tree --no-commit-id --name-only -r 
+    standup = log --since '1 day ago' --oneline --author rooslunn@gmail.com
+    graph = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+    br = branch
+    mrgnff = merge --no-ff
+    sw = switch
+    rename = branch -m
+[user]
+    name = Ruslan Kladko
+    email = rkladko@gmail.com
+[core]
+    editor = vim
+    pager = less -r
+[push]
+    default = simple
+[init]
+    defaultBranch = main
+
